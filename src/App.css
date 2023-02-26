@@ -1,38 +1,1288 @@
-.App {
-  text-align: center;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+   display: block;
+}
+body {
+   line-height: 1;
+}
+ol, ul {
+   list-style: none;
+}
+blockquote, q {
+   quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+/* Css style reset code above so css styling will look the same on most browsers (Firefox, Chrome, etc)
+from http://meyerweb.com/eric/tools/css/reset/   v2.0 | 20110126 License: none (public domain) */
+
+.makeinvis{display:none;}
+
+body{/*background-color: #FAFAFA; */
+    background-color: #2b2b2b ; 
+
+    height: 100%;
+position:relative;}
+
+.scrollupbutton{
+    height:30px;
+    position:fixed;
+    bottom:5%;
+    right:2%;
+cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.tododiv{ background-color: #ebecf0; 
+border-radius: 5px;
+height:fit-content;
+margin-bottom: 20px;
+width:390px;
+max-width: 500px;
+outline:2px solid black;
+position:relative;
+box-shadow: -2px -2px 20px #FAFAFA ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.centerprogress{display: flex;
+    margin-top: 5px;
+justify-content: center;}
+
+.tododiv:hover{background-color: #f3f3f3;}
+
+.welcome{font-size: 1.3rem;}
+
+
+.divdate{}
+.divtitle{}
+
+.horiz{background-color: #f3f3f3;
+    height:1px;
+border:none;}
+
+.deletetodox{position:absolute;
+right:10px;
+top:3px;
+cursor: pointer;}
+
+.deletetodox:hover{color:red;}
+
+.nameofapp{color:#FAFAFA;
+    margin-top: 80px;
+font-size: 1.3rem;
+margin-bottom:20px;}
+
+.headeroftododiv{margin-bottom: 10px;
+display:flex;
+justify-content: center;
+position:relative;
+
 }
 
-.App-link {
-  color: #61dafb;
+.tododate{display:inline;
+padding-top:4px ;
+padding-left:4px ;
+color:grey;
+left:2px;
+margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tododescription{margin-top:20px;
+
+padding-left: 4px;
+font-size:1.2rem;}
+
+.todotitle{display:inline;
+padding-left: 4px;
+font-size:1.3rem;
+font-weight: bold;
+left:30px;
 }
+
+.todobuttondiv{margin-bottom: 10px;
+position:relative;}
+
+
+
+
+.deletebutton{position:absolute;
+    background-color: transparent;
+    border:none;
+right:7px;
+top:1px;}
+
+.fa-pen-to-square{height:20px;
+cursor:pointer;}
+
+.fa-pen-to-square:hover{color:pink;}
+
+.fa-trash{height:19px;
+    cursor:pointer;
+}
+
+.fa-trash:hover{color:red}
+
+.editbutton{margin-left:293px;
+    background-color: transparent;
+    border:none;
+}
+
+.middlediv{
+    height:30px;
+    position:relative;
+    margin-bottom: 23px;
+display: flex;
+justify-content: center;
+}
+
+.parentoftododiv{
+
+    display: flex;
+justify-content: center;}
+
+.todotitle{font-size: 20px;}
+
+.todoprogress{margin-top: 20px;
+color:red;
+margin-bottom:20px;
+padding-left: 4px;}
+
+.headerdatediv{color:white;
+position: absolute;
+top:70px;
+}
+
+
+
+.selects{font-size: 16px;
+    border-radius: 5px;
+
+    height: 30px;
+}
+
+
+.containprogress{display: flex;
+justify-content: center;
+}
+
+
+.todoprogresscomplete{margin-top:20px;
+color:green;
+margin-bottom:20px;
+padding-left: 4px;}
+
+.deletealltodos{color:black;
+   
+    display: inline-block;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    height:30px;
+    top:5px;
+    right:50px;
+/* position:absolute; */
+cursor:pointer;
+}
+
+.signoutbuttondiv{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.containdeleteall{
+    margin-top: 10px;
+height:80px;
+display: flex;
+align-items: center;
+
+}
+
+.deletealltodosdiv{display: flex;
+justify-content: center;
+
+
+width:100%}
+
+
+
+.deletealltodos:hover{background-color: #E8E8E8;}
+
+.headerdiv{text-align: center;}
+
+.todomodal{color:black;
+    height:300px; 
+   /* width:350px;  */ max-width:500px;
+   width:95vw;
+    z-index:101;
+    background-color: white;
+
+    border-radius: 7px 7px;
+    /* Center div vertically */ 
+    position: fixed;
+    top:00;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 90px;
+    box-shadow: -4px -4px 70px #203354;}
+
+    .centertheeditdescription{
+display: flex;
+justify-content: center;
+margin-bottom: 10px;
+    }
+
+    .edittodomodalhidden{color:black;
+        visibility: hidden;
+        height:300px; 
+       /* width:350px;  */ width:50vw;
+        outline:2px solid green;
+        z-index:3;
+        background-color: white;
+        outline: 2px solid black; 
+        border-radius: 7px 7px;
+        /* Center div vertically */ 
+        position: absolute;
+        top:00;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-top: 50px;
+        box-shadow: -4px -4px 100px white ;}
+
+        .editdate{font-size: 16px;
+            display: inline;
+            width:150px;}
+
+        .edittodomodalvisible{color:black;
+            visibility: visible;
+            height:360px; 
+           /* width:350px;  */ width:95vw;
+max-width:540px;
+            z-index:101;
+            background-color: white;
+            outline: 2px solid black; 
+            border-radius: 7px;
+            /* Center div vertically */ 
+            position: fixed;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            margin-top: 70px;
+            box-shadow: -4px -4px 70px #203354;}
+
+
+
+
+.removetodomodal{display:none;}
+
+ .darkoverlay{
+position:fixed;
+width:100%;
+height:100vh;
+background-color: rgba(0,0,0,0.60);
+z-index: 100;
+top:0;
+left:0;}
+
+.darkoverlay2{
+    position:fixed;
+    width:100%;
+    height:100vh;
+    background-color: red;
+    z-index: 1077;
+    top:0;
+    left:0;}
+
+.removedarkoverlay{display:none;}
+
+.loginpagediv{
+height:100vh;
+display: flex;
+justify-content: center;
+position: relative;
+}
+
+.registrationpagediv{
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.goback{color:black;
+cursor: pointer;
+padding: 5px;
+}
+
+.goback:hover{background-color: #E8E8E8;
+    border-radius: 50%;
+}
+
+.gobackdiv{position:absolute;
+left:7px;
+top:9px}
+
+.gobackdiv2{
+    position:absolute;
+    left:12px;
+    top:11px
+}
+
+.goback2{cursor: pointer;}
+
+.inneremailresetdiv{
+    position:relative
+}
+
+.emailresetdiv{color:#FAFAFA;
+    height:150px; 
+    /* width:350px;  */ max-width:500px;
+    min-width:320px;
+    width:95vw;
+    z-index:3;
+    background-color: #FAFAFA;
+    
+    border-radius: 7px 7px;
+    /* Center div vertically */ 
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 90px;
+    box-shadow: -4px -4px 100px white ;}
+
+    .resettip{color: #222222;
+    line-height: 25px;}
+
+    .erroruser{color:red;
+        line-height: 20px;
+        margin-left: 20px;}
+
+    .erroruserdiv{display: flex;
+        margin-top: 16px;
+    justify-content: center;}
+
+    .resettipdiv{
+        margin-top: 15px;
+display: flex;
+justify-content: center;
+margin-bottom:15px;
+padding-left:20px;
+    }
+
+.loginpagewrapper {color:#FAFAFA;
+height:fit-content;
+padding-bottom: 20px;
+/* width:350px;  */ max-width:400px;
+width:95vw;
+z-index:3;
+background-color: #FAFAFA;
+
+border-radius: 7px 7px;
+/* Center div vertically */ 
+position: fixed;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+margin-top: 60px;
+box-shadow: -4px -4px 100px white ;
+}
+
+
+.createanaccountemaillabel{
+color:#222222;
+margin-left:20px;
+margin-bottom:3px;}
+
+.createanaccountpasswordlabel{
+color: #222222;
+margin-left:20px;
+margin-bottom:3px;
+}
+
+.createanaccountpasswordinput{
+    font-size:16px;
+    height:23px;
+    padding-left: 5px;
+    border-radius: 4px;
+    min-width: 100px;
+    width:350px;
+    min-width: 100px;
+    margin-left:20px
+}
+
+.registersubmitbuttondiv{
+    display: flex;
+margin-top: 20px;
+justify-content: center;}
+
+.registererrormessage{color:red;
+}
+
+.registererrormessagediv{
+
+display: flex;
+justify-content: center;
+margin-top: 10px;
+}
+
+.passwordsentdiv{outline: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: greenyellow;
+    word-wrap: normal;
+    line-height: 20px;
+height:40px}
+
+.passwordsent{color:black;}
+
+.registersubmitbutton{
+    width:225px;
+    background-color: #2b2b2b;
+    color:#FAFAFA;
+    border-radius: 2px;
+    cursor: pointer;
+font-size: 14px;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+height:30px
+}
+
+.registersubmitbutton:hover{ background-color: #404040;}
+
+.createanaccountemailinput{
+    font-size:16px;
+    height:23px;
+    padding-left: 5px;
+    border-radius: 4px;
+    width:350px;
+margin-bottom: 10px;
+margin-left:20px
+}
+
+
+.createanaccountdiv{margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+background-color: #404040;
+height:100px;
+position:relative;
+}
+
+.createanaccount{color: #FAFAFA;
+    font-size: 25px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;}
+
+.registrationpagewrapper{
+    color:#FAFAFA;
+    height:320px; 
+    /* width:350px;  */ max-width:400px;
+    width:95vw;
+    z-index:3;
+    background-color: #FAFAFA;
+    
+    border-radius: 7px 7px;
+    /* Center div vertically */ 
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-top: 90px;
+    box-shadow: -4px -4px 100px white ;
+
+
+
+}
+
+.xclose{color:whitesmoke;
+    position:absolute;
+    right:7px;
+    top:6px;
+ font-size: larger;
+    cursor: pointer;
+    z-index: 2;
+    }
+
+.xclose:hover{color:red}
+
+.tododescriptiondiv{background-color: #404040;
+height:80px;
+
+}
+
+.registertext{color:black;}
+
+
+
+.registertextdiv{margin-top:15px;
+    display: flex;
+justify-content: center;}
+
+.headertext{padding-top: 30px;
+    color: #FAFAFA;
+    width:fit-content;
+    font-size: 1.3rem;
+margin:0 auto;}
+
+.addnewtodobutton{height:24px;
+margin-left: 3px;
+width:37px;}
+
+.todomodalheader{outline:2px solid;
+height:90px;
+}
+
+/*
+.description{margin-top: 20px;
+margin-bottom: 90px;} */
+
+.centerdescriptiondiv{
+    display:flex;
+    justify-content: center;
+
+}
+
+.description{height:100px;
+    resize:none;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size:16px;
+width:490px;}
+
+.add{height:35px;
+width:70px;
+cursor:pointer;
+border-radius: 8px;
+margin-right: 15px;
+background-color: black;
+color: whitesmoke;
+}
+
+.add2{height:35px;
+    width:90px;
+    font-size: 1.0rem;
+    cursor:pointer;
+    border-radius: 8px;
+    margin-right: 15px;
+    background-color: black;
+    color: whitesmoke;}
+
+.cancelbutton{margin-right: 15px;
+    height:35px;
+    width:70px;
+    cursor:pointer;
+    border-radius: 8px;
+
+    background-color: black;
+    color: whitesmoke;}
+
+.cancelbutton:hover{background-color: #2d2d2d;}
+
+.add:hover{background-color: #2d2d2d;}
+
+.modalbuttondiv{/* outline:2px solid; */
+text-align: right;
+margin-top: 15px;
+
+}
+
+.edittitle{margin-top:5px;
+}
+
+.edittodotitleheader{display: inline;
+font-size: 1.2rem;
+margin-left: 5px;}
+
+
+.editdateheader{display: inline;
+margin-left:30px;
+margin-right:5px;
+font-size: 1.2rem;
+}
+
+.datecontain{display: inline;
+
+}
+
+
+.edittitle{font-size:16px;}
+
+.loginword{color: #FAFAFA;
+font-size: 30px;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.containlogininputemail{
+
+    display: flex;
+    justify-content: center;
+
+}
+.logininputemail{background-color: white;
+font-size:16px;
+height:23px;
+padding-left: 5px;
+border-radius: 4px;
+width:220px;}
+
+.emailresetinput{background-color: white;
+    padding-left: 5px;
+    height:23px;
+    border-radius: 4px;
+    font-size: 16px;
+    width:220px;}
+
+.containlogininputpassword{
+    margin-top: 10px;
+display: flex;
+justify-content: center;
+}
+
+.logininputpassword{
+    font-size: 16px;
+    height:23px;
+    width:220px;
+    margin-top: 10px;
+    border-radius: 4px;
+    padding-left: 5px;
+}
+
+.resetpasswordheader{color:black;
+margin-top:10px}
+
+.resetpasswordheaderdiv{display: flex;
+justify-content: center;
+font-size: 1.3rem;
+margin-bottom: 10px;}
+
+.containgooglebutton{
+margin-top: 10px;
+margin-bottom: 18px;
+display: flex;
+justify-content: center;}
+
+.forgotpassworddiv{
+  
+display: flex;
+justify-content: center;
+margin-top: 15px;}
+
+.containfacebookbutton{
+
+margin-top: 10px;
+display: flex;
+justify-content: center;
+}
+
+.forgotpassword{
+cursor: pointer;
+padding:5px;
+color:blue;}
+
+.signuptext{color:blue;
+    text-decoration: underline;
+  padding:5px;
+cursor:pointer}
+
+.signuptext:hover{color:darkblue;
+    background-color: #E8E8E8;
+    border-radius: 4px;}
+
+.forgotpassword:hover{border-radius: 4px;
+    color:darkblue;
+background-color: #E8E8E8;}
+
+
+.facebookbutton{
+    width:200px;
+    height:40px;
+cursor: pointer;
+background-color: #1877F2;
+position: relative;
+color:#FAFAFA;
+border-radius: 4px;
+border: none;
+font-family: 'Roboto', sans-serif;
+font-size:14px;
+padding-left: 35px;
+margin-left:0px ;
+}
+
+.buttonia{width:300px}
+
+.flogo2{height:27px;
+position:absolute;
+top:6px;
+left:5px;
+}
+
+.resetpasswordbutton{
+    height:30px;
+    width:90px;
+margin-left: 10px;
+cursor: pointer;
+}
+
+.containemailresetinputandbuttondiv{display: flex;
+justify-content: center;
+}
+
+.containor{display: flex;
+justify-content: center;
+margin-top:15px}
+
+.googlebutton{ width:200px;
+    background-color: #4285F4 ;
+    color:white;
+    padding-left: 30px;
+    border-radius:4px;
+ cursor: pointer;
+ border:none;
+ position: relative;
+ font-family: 'Roboto', sans-serif;
+ font-size:14px;
+    height:40px;}
+
+.googlebuttonreal{cursor:pointer;
+    height:46px;
+}
+
+.svgyo{position: absolute;
+
+top:-3px;
+left:-4px;
+height:46px
+}
+
+.orspan{color:black;}
+.orspan:after{  content:"\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+    text-decoration:line-through;}
+.orspan:before{ content:"\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
+    text-decoration:line-through;}
+
+    .containloginbutton{
+       
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        }
+
+.loginbutton{    width:225px;
+    background-color: #222222;
+    color:#FAFAFA;
+    border-radius: 2px;
+    cursor: pointer;
+font-size: 14px;
+font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+height:35px
+}
+
+.loginbutton:hover{ background-color: #404040}
+
+.loginworddiv{margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+background-color: #404040;
+height:80px;}
+
+.parentnavbar{
+    position: fixed;
+    width:100%;
+    top:0;
+    z-index: 10;
+}
+
+.navbar{
+height:60px;
+display:flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+background-color:  #222222;
+margin-bottom: 15px;
+position: relative;
+}
+
+.innerprofilemodaldiv{height:100px;
+    position: relative;
+}
+
+.profilemodal{position:absolute;
+    right:10px;
+    top:60px;
+height:260px;
+width:300px;
+border-radius: 10px;
+background-color: #3a3b3c;
+z-index:100000000;
+border: 2px solid black;
+}
+
+.modalprofileusername{color:white;
+margin-left: 70px;
+left:70px;
+top:40px;
+font-size:1.1rem;
+
+}
+
+.containprofileemail{
+    display: flex;
+
+}
+
+.containprofileusername{
+display: flex;
+}
+
+.modalprofileemail{
+    color:white;
+    left:90px;
+    top:60px;
+    font-size:1.1rem;
+    margin-left: 70px;
+}
+
+.youraccountdiv{display: flex;
+    justify-content: center;
+align-content: center;}
+
+.youraccounttext{margin-top: 5px;
+    color:white;
+    font-size: 1.2rem;}
+
+.modalprofilepic{
+    height:45px;
+    border-radius: 50%;
+    cursor:pointer;
+    position: absolute; 
+    left:10px;
+    top:40px;
+width:45px;
+color:white;
+}
+
+.buttondiv{display:inline;}
+
+.innernavdiv{
+width:100%;
+}
+
+.greetings{display: inline;
+    font-size: 1.4rem;
+color:white;}
+
+.profilepic{
+    border-radius: 50%;
+    cursor:pointer;
+    position: absolute;
+    right:20px;
+height:37px;
+width:37px;
+color:white;
+
+}
+
+
+
+.signoutbutton{width:100px;
+border-radius: 4px;
+background-color: whitesmoke;
+background-color:  #E8E8E8;
+cursor:pointer;
+
+height:30px}
+
+.signoutbutton:hover{background-color: #D3D3D3;}
+
+.prac{height:100px;
+width:100px;
+background-color:red;}
+
+.profilepic:hover{outline:2px solid pink;}
+
+.addnewtodoinputfield{font-size: 16px;
+margin-bottom: 20px;
+width:200px;
+
+margin-left: 10px;}
+
+.containtitle{display: inline;}
+
+/*
+@media (max-width: 425px){
+
+.deletealltodos{
+    right:30px;
+
+}
+
+}
+
+@media (max-width: 387px){
+
+    .deletealltodos{
+        right:5px;
+    
+    } 
+    
+
+}*/
+
+
+@media (max-width:520px){
+
+    .edittitle{width:320px;
+        display: inline;
+        
+        }
+
+        .containtitle{display: block;
+        margin-bottom: 10px;}
+        
+        .editdate{width:320px;
+            display: inline;
+            margin-left: 0px;
+            position: static;
+        }
+        
+        .edittodotitleheader{
+            margin-right: 5px;
+        margin-left: 10px;
+        }
+        
+        .editdateheader{margin-left: 10px;
+            display: inline;
+            position: static;
+        margin-right: 10px;}
+        
+        
+        
+        .containtitleanddate{
+            justify-content: flex-start;
+                }
+
+.edittodomodalvisible{ height:400px; }
+
+}
+
+
+@media(max-width:407px){
+    .edittitle{width:250px;
+        display: inline;
+        
+        }
+
+        .editdate{width:250px;
+            display: inline;
+            margin-left: 0px;
+            position: static;
+        }
+
+}
+
+@media (max-width:713px) {
+
+.deletealltodosdiv{justify-content: center;}
+
+}
+
+@media (max-width:390px) {
+
+.tododiv{width:90vw;}
+
+.editbutton{margin-left: 240px;}
+    
+    }
+
+
+    @media (max-width:365px) {
+
+    .editbutton{margin-left: 220px;}   
+    }
+
+
+    @media (max-width:405px){
+.createanaccountemailinput{width:300px;}
+
+.createanaccountpasswordinput{width:300px}
+    }
+
+    @media (max-width:352px){
+        .createanaccountemailinput{width:270px;}
+        
+        .createanaccountpasswordinput{width:270px}
+            }
+
+            @media (max-height:545px){
+.loginpagewrapper{margin-top: 20px;
+}
+
+.loginworddiv{
+height:60px
+
+
+}
+
+.loginword{font-size: 20px;}
+
+
+.registertextdiv{margin-top: 10px;}
+
+
+.forgotpassworddiv{margin-top: 12px;}
+
+.googlebutton{ width:200px;
+    background-color: #4285F4 ;
+    color:white;
+    padding-left: 30px;
+    border-radius:4px;
+ cursor: pointer;
+ border:none;
+ position: relative;
+ font-family: 'Roboto', sans-serif;
+ font-size:14px;
+    height:35px;}
+
+
+
+.svgyo{position: absolute;
+
+top:-3px;
+left:-6px;
+height:40px
+} 
+
+.facebookbutton{
+    width:200px;
+    height:35px;
+cursor: pointer;
+background-color: #1877F2;
+position: relative;
+color:#FAFAFA;
+border-radius: 4px;
+border: none;
+font-family: 'Roboto', sans-serif;
+font-size:14px;
+padding-left: 35px;
+margin-left:0px ;
+}
+
+
+.flogo2{height:26px;
+position:absolute;
+top:3px;
+left:5px;
+}
+
+
+            }
+
+    @media(max-height:450px){.registrationpagewrapper{margin-top: 20px ;}}
+
+
+            @media (max-height:420px){
+
+.flogo2{top:3px;
+
+height:27px}
+
+/*
+.svgyo{position: absolute;
+
+    top:-2px;
+    left:-6px;
+    height:40px
+    }
+ */
+
+                .loginpagewrapper{margin-top: 2px;
+                }
+                
+                .loginworddiv{
+                height:50px
+                
+                
+                }
+                
+                .loginword{font-size: 20px;}
+                
+            }
+
+
+           @media (max-width:515px){
+
+
+            .edittodomodalvisible{height:400px}
+
+
+            .modalbuttondiv{
+         }
+
+            }
+
+        @media (max-height:453px){
+            .edittodomodalvisible{margin-top: 20px;}
+            .edittodomodalvisible{height:330px;}
+            .description{height:70px}
+
+            .todomodal{height:280px;
+            margin-top:40px;
+            }
+        }
+
+        @media (max-width:503px){
+
+            .modalbuttondiv{display: flex;
+            justify-content: center;}
+
+            .add2{width:100px;
+                font-size: 1.1rem;}
+
+            .cancelbutton{width:90px}
+
+            .add{width:90px}
+        }
+
+        @media(max-width:343px){
+.edittitle{width:180px;
+display: inline;
+
+}
+
+.editdate{width:180px;
+    display: inline;
+    margin-left: 0px;
+    position: static;
+}
+
+.edittodotitleheader{
+    margin-right: 5px;
+margin-left: 10px;
+}
+
+.editdateheader{margin-left: 10px;
+    position: static;
+margin-right: 10px;}
+
+
+
+.containtitleanddate{
+    justify-content: flex-start;
+        }
+    }
+
+    @media (max-width:346px){
+
+        .modalbuttondiv{outline:2px solid red;}
+
+.editbutton{
+margin-left: 190px;}
+
+    }
+
+    @media (max-height:320px){
+        .todomodal{margin-top: 20px;}
+
+        .edittodomodalvisible{margin-top: 0px;}
+
+        .modalbuttondiv{margin-top: 0px;}
+    }
+
+    @media (max-height: 468px){
+.loginpagewrapper{position: static;
+margin-top: 10px;
+width:645px;
+max-width: 645px;
+padding-bottom: 30px;
+}
+
+.containlogininputemail{display: inline;
+margin-left: 80px;}
+.containlogininputpassword{display: inline;
+    margin-left: 20px;
+}
+    }
+
+@media (max-height:414px){
+.loginpagewrapper{margin-top: 10px;}
+
+.containgooglebutton{display: inline;
+margin-left: 113px;}
+
+.containor{margin-bottom: 10px;}
+
+.containfacebookbutton{display: inline;
+margin-left: 20px;}
+
+.forgotpassworddiv{margin-top: 15px;}
+
+
+}
+
+@media (max-height:596px){
+.loginpagewrapper{margin-top: 10px;}
+
+}
+@media (max-height:365px){
+    .loginworddiv{height: 50px;}
+
+    .containloginbutton{margin-top: 5px;}
+}
+
+@media(max-height:426px){.loginpagewrapper{margin-top: 20px;}}
+
+@media (max-width:368px){
+
+    .resetpasswordbutton{width:70px}
+}
+
+@media(max-height:342px){
+    .registrationpagewrapper{margin-top: 5px;}
+}
+
+@media(max-height:336px){  .loginworddiv{height: 40px;}
+.loginpagewrapper{margin-top: 10px;}}
